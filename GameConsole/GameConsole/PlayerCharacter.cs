@@ -4,9 +4,9 @@ namespace GameConsole
 {
     internal class PlayerCharacter
     {
-        private readonly ISpecialDefence _specialDefence;
+        private readonly SpecialDefence _specialDefence;
 
-        public PlayerCharacter(ISpecialDefence specialDefence)
+        public PlayerCharacter(SpecialDefence specialDefence)
         {
             _specialDefence = specialDefence;
         }

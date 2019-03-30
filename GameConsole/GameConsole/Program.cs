@@ -8,7 +8,7 @@ namespace GameConsole
         {
             PlayerCharacter sarah = new PlayerCharacter(new DiamondSkinDefence()) {Name = "Sarah"};
             PlayerCharacter amrit = new PlayerCharacter(new IronBonesDefence()) {Name = "Amrit"};
-            PlayerCharacter gentry = new PlayerCharacter(new NullDefence()) {Name = "Gentry"};
+            PlayerCharacter gentry = new PlayerCharacter(SpecialDefence.Null) {Name = "Gentry"};
 
             sarah.Hit(10);
             amrit.Hit(10);
