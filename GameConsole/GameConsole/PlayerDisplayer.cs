@@ -15,17 +15,23 @@ namespace GameConsole
                 Console.WriteLine(player.Name);
             }
 
-//            if (player.DaysSinceLastLogin == -1)
-            if (player.DaysSinceLastLogin == null)
-            {
-                Console.WriteLine("No value for DaysSinceLastLogin");
-            }
-            else
-            {
-                Console.WriteLine(player.DaysSinceLastLogin);
-            }
+//            int days = player.DaysSinceLastLogin.GetValueOrDefault(-1);
+//            int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1;
+            int days = player.DaysSinceLastLogin ?? -1;
+            Console.WriteLine($"{days} days since last login");
 
-//            if (player.DateOfBirth == DateTime.MinValue)
+//            if (player.DaysSinceLastLogin == null)
+//            if (player.DaysSinceLastLogin.HasValue)
+//            {
+////                Console.WriteLine(player.DaysSinceLastLogin);
+//                Console.WriteLine(player.DaysSinceLastLogin.Value); // int, not a Nullable<int> as the comment above
+//            }
+//            else
+//            {
+////                Console.WriteLine(player.DaysSinceLastLogin.Value); // throws an exception
+//                Console.WriteLine("No value for DaysSinceLastLogin");
+//            }
+
             if (player.DateOfBirth == null)
             {
                 Console.WriteLine("No date of birth specified");
